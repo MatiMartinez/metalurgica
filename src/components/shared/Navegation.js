@@ -1,0 +1,89 @@
+import React, { useState, useEffect } from "react"
+import styled from "styled-components"
+import { Link } from "gatsby"
+
+import { FaAngleRight } from "react-icons/fa"
+
+const Navegation = () => {
+  // STATE
+  const [scroll, setScroll] = useState(false)
+
+  // EFFECTS
+  useEffect(() => {
+    function changeNav() {
+      if (window.scrollY >= 100) {
+        setScroll(true)
+      } else {
+        setScroll(false)
+      }
+    }
+    changeNav()
+    window.addEventListener("scroll", changeNav)
+  }, [])
+
+  // RETURN
+  return (
+    <Header scroll={scroll}>
+      <h1>LOGO</h1>
+      <Nav>
+        <NavLink to="/">INICIO</NavLink>
+        <NavLink to="/">SOBRE GZ</NavLink>
+        <NavLink to="/">NUESTROS SERVICIOS</NavLink>
+        <ContactLinkWrapper>
+          <FaAngleRight size="1.25rem" color="#8f1d14" />
+          <ContactLink to="/contact">CONTACTO</ContactLink>
+        </ContactLinkWrapper>
+      </Nav>
+    </Header>
+  )
+}
+
+export default Navegation
+
+const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.5s all ease;
+  background-color: ${props => (props.scroll ? "#ffffff" : "transparent")};
+  height: ${props => (props.scroll ? "80px" : "100px")};
+  box-shadow: ${props =>
+    props.scroll ? "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" : "none"};
+`
+
+const Nav = styled.nav`
+  display: flex;
+  align-items: center;
+  grid-gap: 2rem;
+`
+
+const NavLink = styled(Link)`
+  font-size: 1rem;
+  cursor: pointer;
+  color: #222222;
+
+  :hover {
+    color: #8f1d14;
+  }
+`
+
+const ContactLinkWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+`
+
+const ContactLink = styled(Link)`
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: #222222;
+
+  :hover {
+    color: #8f1d14;
+  }
+`
