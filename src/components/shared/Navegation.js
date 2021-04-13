@@ -28,6 +28,7 @@ const Navegation = () => {
       <Nav>
         <NavLink to="/">INICIO</NavLink>
         <NavLink to="/">SOBRE GZ</NavLink>
+        <NavLink to="/gallery">GALERÍA</NavLink>
         <NavLink to="/">NUESTROS SERVICIOS</NavLink>
         <ContactLinkWrapper>
           <FaAngleRight size="1.25rem" color="#8f1d14" />
@@ -49,8 +50,9 @@ const Header = styled.header`
   top: 0;
   left: 0;
   right: 0;
+  z-index: 1;
   transition: 0.5s all ease;
-  background-color: ${props => (props.scroll ? "#ffffff" : "transparent")};
+  background-color: ${props => (props.scroll ? "#ffffff" : "#ffffff")};
   height: ${props => (props.scroll ? "80px" : "100px")};
   box-shadow: ${props =>
     props.scroll ? "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" : "none"};
