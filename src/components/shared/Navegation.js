@@ -29,7 +29,7 @@ const Navegation = () => {
         <NavLink to="/">INICIO</NavLink>
         <NavLink to="/">SOBRE GZ</NavLink>
         <NavLink to="/gallery">GALERÍA</NavLink>
-        <NavLink to="/">NUESTROS SERVICIOS</NavLink>
+        <NavLink to="/services">NUESTROS SERVICIOS</NavLink>
         <ContactLinkWrapper>
           <FaAngleRight size="1.25rem" color="#8f1d14" />
           <ContactLink to="/contact">CONTACTO</ContactLink>
