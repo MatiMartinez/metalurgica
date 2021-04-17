@@ -50,7 +50,7 @@ const Header = styled.header`
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 99;
   transition: 0.5s all ease;
   background-color: ${props => (props.scroll ? "#ffffff" : "#ffffff")};
   height: ${props => (props.scroll ? "80px" : "100px")};

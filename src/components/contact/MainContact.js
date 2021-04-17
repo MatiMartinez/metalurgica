@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 import InfoWrapper from "./InfoWrapper"
@@ -50,7 +49,6 @@ const WrapperBg = styled.div`
   left: 0;
   bottom: 0;
   right: 0;
-  width: 100%;
 `
 
 const FakeImg = styled(Image)`

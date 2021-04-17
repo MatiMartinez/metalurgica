@@ -18,7 +18,7 @@ const WhatsappWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 1.5rem;
-  position: absolute;
+  position: fixed;
   bottom: 1rem;
   right: 1rem;
   background-color: #25d366;
