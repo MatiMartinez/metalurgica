@@ -25,7 +25,7 @@ const Footer = styled.footer`
   align-items: center;
   justify-content: space-evenly;
   padding: 3rem;
-  background-color: #1b120f;
+  background-color: #222222;
   color: #e6dedd;
 `
 
