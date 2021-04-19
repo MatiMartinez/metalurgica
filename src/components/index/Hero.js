@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
+
 import HeroText from "./HeroText"
 
 const Hero = () => {
@@ -46,6 +47,6 @@ const WrapperBg = styled.div`
 `
 
 const FakeImg = styled(Image)`
-  height: 100%;
   width: 100%;
+  height: 100%;
 `

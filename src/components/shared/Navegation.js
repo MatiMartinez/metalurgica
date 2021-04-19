@@ -27,7 +27,6 @@ const Navegation = () => {
       <h1>LOGO</h1>
       <Nav>
         <NavLink to="/">INICIO</NavLink>
-        <NavLink to="/">SOBRE GZ</NavLink>
         <NavLink to="/gallery">GALERÍA</NavLink>
         <NavLink to="/services">NUESTROS SERVICIOS</NavLink>
         <ContactLinkWrapper>
