@@ -20,10 +20,7 @@ const Info = () => {
 
   return (
     <Container>
-      <Title>
-        Lorem ipsum dolor sit amet consectetur adipiscing elit interdum,
-        molestie nostra sollicitudin
-      </Title>
+      <Title>Mendoza, Argentina</Title>
       <Wrapper>
         <ImageWrapper>
           <FakeImg fluid={data.bg.childImageSharp.fluid} />
@@ -42,6 +39,18 @@ const Container = styled.div`
   align-items: center;
   row-gap: 4rem;
   padding: 6rem 6rem;
+
+  @media (max-width: 768px) {
+    padding: 4rem 4rem;
+  }
+
+  @media (max-width: 576px) {
+    padding: 4rem 2rem;
+  }
+
+  @media (max-width: 375px) {
+    padding: 4rem 1rem;
+  }
 `
 
 const Title = styled.h1`
@@ -52,19 +61,24 @@ const Title = styled.h1`
 `
 
 const Wrapper = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  column-gap: 4rem;
+  grid-gap: 4rem;
+
+  @media (max-width: 576px) {
+    grid-template-columns: 1fr;
+  }
 `
 
 const ImageWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
 `
 
 const FakeImg = styled(Image)`
-  width: 500px;
+  width: 100%;
   height: auto;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `

@@ -4,7 +4,7 @@ import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 
-const BlackService = () => {
+const MoreBlackService = () => {
   const data = useStaticQuery(graphql`
     query {
       bg: file(relativePath: { eq: "old-roof.jpg" }) {
@@ -46,7 +46,7 @@ const BlackService = () => {
   )
 }
 
-export default BlackService
+export default MoreBlackService
 
 const Container = styled.div`
   display: grid;

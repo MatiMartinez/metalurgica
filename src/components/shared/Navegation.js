@@ -55,6 +55,18 @@ const Header = styled.header`
   height: ${props => (props.scroll ? "80px" : "100px")};
   box-shadow: ${props =>
     props.scroll ? "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" : "none"};
+
+  @media (max-width: 768px) {
+    padding: 0 4rem;
+  }
+
+  @media (max-width: 576px) {
+    padding: 0 2rem;
+  }
+
+  @media (max-width: 375px) {
+    padding: 0 1rem;
+  }
 `
 
 const Nav = styled.nav`

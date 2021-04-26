@@ -2,26 +2,22 @@ import React from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-import { BiChevronRight } from "react-icons/bi"
+import { AiOutlineDoubleRight } from "react-icons/ai"
 
 const InfoWrapper = () => {
   return (
     <Container>
-      <IntroTitle>Established MMXVIII</IntroTitle>
-      <Title>Interior Design Firm Based in New York</Title>
+      <IntroTitle>Sergio Davila e Hijos</IntroTitle>
+      <Title>Nuestros Servicios</Title>
       <Text>
-        Lorem ipsum dolor sit amet consectetur adipiscing elit interdum,
-        molestie nostra sollicitudin cubilia taciti ut ultricies bibendum,
-        turpis consequat a volutpat fusce elementum pretium. Eleifend tempus
-        tempor duis ac gravida fermentum auctor, lorem ipsum dolor sit amet
-        consectetur adipiscing elit interdum, molestie nostra sollicitudin
-        cubilia taciti ut ultricies bibendum, turpis consequat a volutpat fusce
-        elementum pretium. Eleifend tempus tempor duis ac gravida fermentum
-        auctor.
+        Nos hemos establecido en el negocio desde ya hace varios años, aunque
+        hemos servido a un gran número de clientes durante ese tiempo, cada
+        trabajo es un nuevo desafío para nosotros y nos encantaría ayudarte de
+        la mejor manera. ¡No dudes en contactarnos!
       </Text>
-      <FakeButton>
-        Saber Más <BiChevronRight />
-      </FakeButton>
+      <ToServiceButton to="/services">
+        Nuestros Servicios <AiOutlineDoubleRight />
+      </ToServiceButton>
     </Container>
   )
 }
@@ -49,14 +45,21 @@ const Text = styled.p`
   font-weight: 300;
 `
 
-const FakeButton = styled(Link)`
+const ToServiceButton = styled(Link)`
+  font-weight: 700;
   display: flex;
   align-items: center;
   column-gap: 0.5rem;
   padding: 0.5rem 1rem;
   border-radius: 50px;
   width: max-content;
-  border: 1px solid #222222;
+  border: 2px solid #222222;
   background-color: transparent;
   cursor: pointer;
+  transition: all 0.5s ease;
+
+  :hover,
+  :focus {
+    box-shadow: inset 190px 0 0 0 #e6dedd;
+  }
 `

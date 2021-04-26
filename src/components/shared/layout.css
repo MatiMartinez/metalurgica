@@ -25,6 +25,7 @@ a {
   text-decoration: none;
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  color: unset;
 }
 a:active,
 a:hover {
@@ -33,7 +34,6 @@ a:hover {
 
 * {
   box-sizing: border-box;
-  font-size: 16px;
 }
 *:before {
   box-sizing: border-box;
@@ -53,7 +53,11 @@ button {
   outline: none;
 }
 
-@media (max-width: 576px) {
+* {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
   * {
     font-size: 14px;
   }

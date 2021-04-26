@@ -3,6 +3,8 @@ import styled from "styled-components"
 
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
+import { AiOutlineDoubleRight } from "react-icons/ai"
+import { Link } from "react-scroll"
 
 const Hero = () => {
   const data = useStaticQuery(graphql`
@@ -20,13 +22,20 @@ const Hero = () => {
   return (
     <Contianer>
       <LeftWrapper>
-        <Title>Lorem ipsum</Title>
+        <Title>Metalúrgica & Techos</Title>
         <Text>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam
+          Ofrecemos una gran variedad de productos, trabajando con proveedores
+          de materia prima de alta calidad con tecnología de vanguardia.
         </Text>
-        <ToServiceButton>Lorem ipsum dolor</ToServiceButton>
+        <ToServiceButton
+          to="services"
+          smooth={true}
+          duration={500}
+          offset={-80}
+        >
+          <TextButton>Ver Servicios</TextButton>
+          <AiOutlineDoubleRight />
+        </ToServiceButton>
       </LeftWrapper>
       <RightWrapper>
         <FakeImg fluid={data.bg.childImageSharp.fluid} />
@@ -41,7 +50,7 @@ const Contianer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 12rem;
+  padding: 6rem 12rem;
 `
 
 const LeftWrapper = styled.div`
@@ -57,16 +66,32 @@ const Title = styled.h1`
 
 const Text = styled.p`
   font-size: 1rem;
-  width: 50%;
+  width: 70%;
 `
 
-const ToServiceButton = styled.button`
+const ToServiceButton = styled(Link)`
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
   padding: 0.5rem 1rem;
   border-radius: 50px;
   width: max-content;
-  border: 1px solid #222222;
+  border: 2px solid #222222;
   background-color: transparent;
   cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.5s ease;
+
+  :hover,
+  :focus {
+    box-shadow: inset 150px 0 0 0 #e6dedd;
+  }
+`
+
+const TextButton = styled.span`
+  font-size: 1rem;
+  font-weight: 700;
 `
 
 const RightWrapper = styled.div`

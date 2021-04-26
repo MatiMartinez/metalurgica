@@ -4,12 +4,11 @@ import styled from "styled-components"
 const HeroText = () => {
   return (
     <Container>
-      <Title>Lorem ipsum dolor sit amet consectetur</Title>
+      <Title>Soluciones definitivas para nuestros clientes</Title>
       <Text>
-        Lorem ipsum dolor sit amet consectetur adipiscing elit interdum,
-        molestie nostra sollicitudin cubilia taciti ut ultricies bibendum,
-        turpis consequat a volutpat fusce elementum pretium. Eleifend tempus
-        tempor duis ac gravida fermentum auctor.
+        Somos una empresa familiar especializada en la construcción, reparación,
+        impermeabilización y mantenimiento de techos en general. También
+        ofrecemos una amplia variedad en servicios de metalúrgica.
       </Text>
     </Container>
   )
@@ -23,8 +22,16 @@ const Container = styled.div`
   row-gap: 2rem;
   width: 40%;
   z-index: 1;
-  text-shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
-    0px -4px 10px rgba(255, 255, 255, 0.3);
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.3);
+  color: #ffffff;
+
+  @media (max-width: 768px) {
+    width: 50%;
+  }
+
+  @media (max-width: 576px) {
+    width: 100%;
+  }
 `
 
 const Title = styled.h1`
@@ -35,4 +42,5 @@ const Title = styled.h1`
 const Text = styled.p`
   font-size: 1.5rem;
   font-weight: 300;
+  text-indent: 2rem;
 `

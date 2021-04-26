@@ -26,6 +26,7 @@ const WhatsappWrapper = styled.div`
   cursor: pointer;
   transition: all 0.5s;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 9999;
 
   :hover {
     bottom: 1.5rem;
