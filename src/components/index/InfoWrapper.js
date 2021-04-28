@@ -8,7 +8,7 @@ const InfoWrapper = () => {
   return (
     <Container>
       <IntroTitle>Sergio Davila e Hijos</IntroTitle>
-      <Title>Nuestros Servicios</Title>
+      <Title>Metalúrgica en General, Techos</Title>
       <Text>
         Nos hemos establecido en el negocio desde ya hace varios años, aunque
         hemos servido a un gran número de clientes durante ese tiempo, cada

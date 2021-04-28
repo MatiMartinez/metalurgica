@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { graphql, useStaticQuery } from "gatsby"
 import Image from "gatsby-image"
 
-import InfoContact from "./InfoContact"
+import ContactCard from "./ContactCard"
 
 const MainContact = () => {
   const data = useStaticQuery(graphql`
@@ -20,18 +20,24 @@ const MainContact = () => {
 
   return (
     <Container>
-      <LeftWrapper>
-        <TitleWrapper>
-          <SecondaryTitle>Tienes alguna</SecondaryTitle>
-          <MainTitle>consulta ?</MainTitle>
-        </TitleWrapper>
-        <InfoContact />
-      </LeftWrapper>
-      <RightWrapper>
-        <ImageWrapper>
-          <FakeImg fluid={data.bg.childImageSharp.fluid} />
-        </ImageWrapper>
-      </RightWrapper>
+      <ContactCard
+        name="Sergio Davila"
+        phone="261 3532900"
+        link="https://wa.me/%2B5492613532900"
+      />
+      <ContactCard
+        name="Facunda Davila"
+        phone="261 6207970"
+        link="https://wa.me/%2B5492616207970"
+      />
+      <ContactCard
+        name="Leandro Davila"
+        phone="261 2630672"
+        link="https://wa.me/%2B5492612630672"
+      />
+      <ImageWrapper>
+        <FakeImg fluid={data.bg.childImageSharp.fluid} />
+      </ImageWrapper>
     </Container>
   )
 }
@@ -39,41 +45,19 @@ const MainContact = () => {
 export default MainContact
 
 const Container = styled.div`
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-`
-
-const LeftWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-`
-
-const TitleWrapper = styled.div`
-  padding: 4rem 0 4rem 6rem;
-`
-
-const SecondaryTitle = styled.h1`
-  font-size: 2rem;
-  font-weight: 400;
-  color: #e6dedd;
-`
-
-const MainTitle = styled.h1`
-  font-size: 4rem;
-  font-weight: 400;
-`
-
-const RightWrapper = styled.div`
+  justify-content: space-around;
+  align-items: center;
   position: relative;
+  padding: 4rem;
 `
 
 const ImageWrapper = styled.div`
   position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  padding: 1rem;
+  top: 2rem;
+  left: 2rem;
+  bottom: 2rem;
+  right: 2rem;
 `
 
 const FakeImg = styled(Image)`

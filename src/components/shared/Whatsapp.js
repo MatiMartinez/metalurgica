@@ -5,7 +5,11 @@ import { FaWhatsapp } from "react-icons/fa"
 
 const Whatsapp = () => {
   return (
-    <WhatsappWrapper>
+    <WhatsappWrapper
+      href="https://wa.me/%2B5492613532900"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <FaWhatsapp size="3rem" color="#ffffff" />
     </WhatsappWrapper>
   )
@@ -13,7 +17,7 @@ const Whatsapp = () => {
 
 export default Whatsapp
 
-const WhatsappWrapper = styled.div`
+const WhatsappWrapper = styled.a`
   display: flex;
   justify-content: center;
   align-items: center;
